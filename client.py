@@ -16,6 +16,12 @@ my_ip = ""                  # For example: "192.168.1.2
 ######################################################
 
 
+# Get custom number to call
+custom_number = input(f"Enter number to call or press enter to use default number: {phone_number_to_call}\n")
+if (custom_number != ""):
+    phone_number_to_call = custom_number
+
+
 
 payload = f"REGISTER sip:{sip_srv_addr} SIP/2.0\r\n"
 payload += f"Via: SIP/2.0/UDP {sip_srv_addr}:{sip_srv_port};branch=z9hG4bKnashds7\r\n"

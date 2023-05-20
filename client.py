@@ -1,19 +1,19 @@
 import socket
 import hashlib
+import os
+from dotenv import load_dotenv
 
 
-####################### CONFIG #######################
+load_dotenv()
 
-sip_srv_addr = "sip.telnyx.com"
-sip_srv_port = 5060
 
-sip_username = ""
-sip_password = ""
+sip_srv_addr = os.getenv("SIP_SRV_ADDR")
+sip_srv_port = os.getenv("SIP_SRV_PORT")
+
+sip_username = os.getenv("SIP_USERNAME")
+sip_password = os.getenv("SIP_PASSWORD")
 
 phone_number_to_call = ""
-my_ip = ""                  # For example: "192.168.1.2
-
-######################################################
 
 
 # Get custom number to call
